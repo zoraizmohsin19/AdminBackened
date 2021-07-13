@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+             "request": "launch",
+             "name": "Launch Node App DEv",
+             "program": "${workspaceFolder}/dist/index.js",
+             "args": [ "dev" ,"5" ,"1"]  
+             },
+        {
+       "type": "node",
+        "request": "launch",
+        "name": "Launch Node App  test",
+        "program": "${workspaceFolder}/dist/index.js",
+        "args": [ "test" ,"5" ,"1"]  
+        },
+        {
+            "type": "node",
+             "request": "launch",
+             "name": "Launch Node App Prod",
+             "program": "${workspaceFolder}/dist/index.js",
+             "args": [ "prod" ,"5" ,"1"]  
+             }
+    ]
+}

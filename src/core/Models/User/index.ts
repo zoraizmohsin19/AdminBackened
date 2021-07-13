@@ -1,0 +1,541 @@
+import { Schema, model, connect, Types } from 'mongoose';
+import { IUser, UserRole, UserEntity } from './IUser';
+import * as q from "q";
+import * as env from './../../../../config/env.json';
+import * as bcrypt from "bcrypt";
+import * as jwt from 'jsonwebtoken';
+import Message from "../../Util/Message";
+import {getDBConnectionURL} from "../../Util/db";
+import * as mongoosePaginate from "mongoose-paginate";
+import * as softDelete from "mongoose-delete";
+import { IPaginatedModel } from "../IPaginatedModel";
+import * as moment from  "moment";
+import * as json5 from "json5"
+import {ServiceProvider} from '../ServiceProvider';
+import {Customer} from '../Customer';
+import {SubCustomer} from '../SubCustomer';
+import {Asset }from '../Asset';
+import { Device } from '../Device';
+import { UserRoles } from '../UserRoles';
+import GomosLogger from '../../Util/commanUtill/GomosLogger';
+import G from '../../Util/commanUtill/gConstant';
+var httpRequest = require('request');
+
+var AES = require("crypto-js/aes");
+var CryptoJS = require("crypto-js");
+
+var secret_key =    "anf123k5md78kr39ktnf94jthrJJHJ89";
+
+connect(getDBConnectionURL(),{ useNewUrlParser: true }) 
+// THIS IS CHECKING DATA WORKING OR NOT ...
+//  .then((res) => {
+//     console.log('Database connection successful', res)
+//   })
+//   .catch(err => {
+//     console.error('Database connection error')
+//   });
+
+const expiresIn  = '1d';
+
+export var UserSchema:Schema      =   new Schema({
+    organizationId: {
+        type: Types.ObjectId
+    },
+    dashboardConfigId: {
+        type:  String,
+        
+    },
+    // clientID: {
+    //     type: String
+    // },
+    userId: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    spCds:[ {
+        type: Schema.Types.ObjectId,ref :ServiceProvider 
+    }],
+    spFlag: { type: String},
+    custCds:[ {
+        type: Schema.Types.ObjectId,ref :Customer 
+    }],
+    custFlag: {
+        type: String
+       
+    },
+    subCustCds: [ {
+        type: Schema.Types.ObjectId,ref :SubCustomer 
+    }],
+    subCustFlag:{
+        type: String
+    },
+    Assets:  [ {
+        type: Schema.Types.ObjectId,ref :Asset 
+    }],
+    assetFlag:{
+        type: String
+    },
+    Devices:  [ {
+        type: Schema.Types.ObjectId,ref :Device 
+    }],
+    deviceFlag:{
+        type: String
+    },
+    userFN: {
+        type: String
+   
+    },
+    userLN: {
+        type: String
+       
+    },
+    userPreference: {
+        type: Schema.Types.Mixed,
+        default: {  "enablePushForNewDevices": true} 
+       },
+    devicePreference: {
+     type: Schema.Types.Mixed,
+     default: []
+    },
+    subscription: {
+        type:Schema.Types.Mixed,
+        default: [] 
+    },
+
+    phone: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    }
+   ,
+   status: {
+    type: String,
+},
+userEntity:Number,
+userRoles:{
+    type: Schema.Types.ObjectId, ref : UserRoles
+},
+lastLoginAt:Date,
+failed_login: {
+    type:Number,
+    default:0,
+},
+ pwdSent: {
+    type: Boolean
+},
+locked_till: Date,
+last_forgot_password:Date, 
+  createdBy:{ type: Schema.Types.ObjectId, ref: 'User' },
+},
+{  minimize: false,
+    timestamps: { createdAt: 'createdTime', updatedAt: 'updatedTime' }
+});
+
+UserSchema.plugin(softDelete);
+UserSchema.plugin(mongoosePaginate);
+
+UserSchema.set('toJSON', {
+    transform: function(doc, ret, options) {
+        delete ret.password;
+        return ret;
+    }
+});
+
+UserSchema.pre('save',(next)=>{
+    let now     =   new Date();
+    if(!this.createdTime){
+        this.createdTime  = now;
+    } else {
+        this.updatedTime  =   now;
+    }
+    return next();
+});
+UserSchema.methods.getServiceProviderList  = async function(){
+    let defer   =   q.defer();
+    try {
+    var user    =   this;
+    var result = []
+    switch(user.userEntity){
+        case UserEntity.PLATFORM :
+            // console.log("this is called", UserEntity.PLATFORM );
+            result =  await ServiceProvider.find({}, {_id: 1})
+            user.spCds = result.map(item => item._id)
+            defer.resolve(new Message(Message.SUCCESS, "SericeProvider", user.spCds));
+            break;
+        case UserEntity.SERVICE_PROVIDER:
+            //  console.log("this is called", UserEntity.SERVICE_PROVIDER );
+             defer.resolve(new Message(Message.SUCCESS, "SericeProvider", user.spCds));
+             break;
+        case UserEntity.CLIENT:
+             defer.resolve(new Message(Message.SUCCESS, "SericeProvider",  user.spCds));
+             break;    
+       case UserEntity.SUB_CUSTOMER:
+            // console.log("this is called", UserEntity.SUB_CUSTOMER );
+            defer.resolve(new Message(Message.SUCCESS, "SericeProvider", user.spCds));
+            break;       
+
+    }
+}
+    catch (error) {
+        defer.reject(new Message(Message.INTERNAL_ERROR, "This is error generated by UserSchema.methods.getServiceProviderList", []));
+    }
+    
+    return defer.promise;
+}
+UserSchema.methods.getCustomerList  = async function(){
+    let defer   =   q.defer();
+    try {
+    var user    =   this;
+    var result = []
+    switch(user.userEntity){
+        case UserEntity.PLATFORM :
+            // console.log("this is called", UserEntity.PLATFORM );
+            result =  await Customer.find({}, {_id: 1})
+            user.custCds = result.map(item => item._id)
+            defer.resolve(new Message(Message.SUCCESS, "Client", user.custCds));
+            break;
+        case UserEntity.SERVICE_PROVIDER:
+            //  console.log("this is called", UserEntity.SERVICE_PROVIDER );
+             if(user.custFlag == "ALL"){
+                result =  await Customer.find({"spId":{ "$in": user.spCds}}, {_id: 1})
+                user.custCds = result.map(item => item._id)
+              }else{
+                // result =  user.custCds
+              }
+             defer.resolve(new Message(Message.SUCCESS, "Client",  user.custCds));
+             break;
+        case UserEntity.CLIENT:
+             defer.resolve(new Message(Message.SUCCESS, "Client",  user.custCds));
+             break;    
+       case UserEntity.SUB_CUSTOMER:
+            // console.log("this is called", UserEntity.SUB_CUSTOMER );
+          
+            defer.resolve(new Message(Message.SUCCESS, "Client", user.custCds));
+            break;       
+
+    }
+}
+    catch (error) {
+        defer.reject(new Message(Message.INTERNAL_ERROR, "This is error generated by UserSchema.methods.getCustomerList ", []));
+    }
+    return defer.promise;
+}
+UserSchema.methods.getSubCustomerList  = async function(){
+    let defer   =   q.defer();
+    try {
+    var user    =   this;
+    var result= []
+    switch(user.userEntity){
+        case UserEntity.PLATFORM :
+            // console.log("this is called", UserEntity.PLATFORM );
+            result =  await SubCustomer.find({}, {_id: 1})
+            user.subCustCds = result.map(item => item._id)
+            defer.resolve(new Message(Message.SUCCESS, "subClient",  user.subCustCds));
+            break;
+        case UserEntity.SERVICE_PROVIDER:
+            //  console.log("this is called", UserEntity.SERVICE_PROVIDER );
+             if(user.custFlag == "ALL"){
+                result =  await SubCustomer.find({"spId":{ "$in": user.spCds}}, {_id: 1})
+                user.subCustCds = result.map(item => item._id)
+              }else{
+                result =  await SubCustomer.find({"custId":{ "$in": user.custCds}}, {_id: 1})
+                user.subCustCds = result.map(item => item._id)
+              }
+             defer.resolve(new Message(Message.SUCCESS, "subClient",  user.subCustCds));
+             break;
+        case UserEntity.CLIENT:
+            //  console.log("this is called", UserEntity.CLIENT );
+             if(user.subCustFlag == "ALL"){
+              result =  await SubCustomer.find({"custId":{ "$in": user.custCds}}, {_id: 1})
+                  user.subCustCds = result.map(item => item._id)
+            }else{
+                //result = user.subCustCds
+            }
+             defer.resolve(new Message(Message.SUCCESS, "subClient", user.subCustCds));
+             break;    
+       case UserEntity.SUB_CUSTOMER:
+            defer.resolve(new Message(Message.SUCCESS, "subClient",  user.subCustCds));
+            break;       
+
+    }
+}
+    catch (error) {
+        defer.reject(new Message(Message.INTERNAL_ERROR, "This is error generated by UserSchema.methods.getSubCustomerList ", []));
+    }
+
+
+    return defer.promise;
+}
+// UserSchema.methods.getUserOrganizationIdBasedList  = async function(){
+//     let defer   =   q.defer();
+//     try {
+//     var user    =   this;
+//     var result= []
+//     var tempId= [];
+//     var tempId2= []
+//     var subCustomerData =[]
+//     var CustomerData =[]
+//     switch(user.userEntity){
+//         case UserEntity.PLATFORM :
+//             // console.log("this is called", UserEntity.PLATFORM );
+//             result =  await ServiceProvider.find({});
+//             tempId = result.map(item => item._id);
+//             CustomerData =  await Customer.find({"_id" : {"$in": tempId}});
+//             CustomerData.map(item => {result.push(item)})
+//               tempId2 = CustomerData.map(item => item._id);
+//              subCustomerData =  await SubCustomer.find({"_id": { "$in": tempId2}});
+//             subCustomerData.map(item => {result.push(item)})
+//              defer.resolve(new Message(Message.SUCCESS, "organizationId",  result));
+//             break;
+//         case UserEntity.SERVICE_PROVIDER:
+//             //  console.log("this is called", UserEntity.SERVICE_PROVIDER );
+//             result =  await ServiceProvider.find({"_id" : user.organizationId});
+//             tempId = result.map(item => item._id);
+//             CustomerData =  await Customer.find({"spId" : {"$in": tempId}});
+//             CustomerData.map(item => {result.push(item)})
+//               tempId2 = CustomerData.map(item => item._id);
+//              subCustomerData =  await SubCustomer.find({"custId": { "$in": tempId2}});
+//             subCustomerData.map(item => {result.push(item)})
+//              defer.resolve(new Message(Message.SUCCESS, "organizationId",  result));
+//              break;
+//         case UserEntity.CLIENT:
+//             //  console.log("this is called", UserEntity.CLIENT );
+//               result =  await Customer.find({"_id" : user.organizationId});
+//                tempId = result.map(item => item._id);
+//                subCustomerData =  await SubCustomer.find({"custId": { "$in": tempId}});
+//               subCustomerData.map(item => {result.push(item)})
+
+//              defer.resolve(new Message(Message.SUCCESS, "organizationId", result));
+//              break;    
+//        case UserEntity.SUB_CUSTOMER:
+//              result =  await SubCustomer.find({"_id": user.organizationId})
+//             defer.resolve(new Message(Message.SUCCESS, "organizationId",  result));
+//             break;       
+
+//     }
+// }
+//     catch (error) {
+//         defer.reject(new Message(Message.INTERNAL_ERROR, "This is error generated by UserSchema.methods.getSubCustomerList ", []));
+//     }
+
+
+//     return defer.promise;
+// }
+
+
+
+UserSchema.methods.getAssetsList  = async function(){
+    let defer   =   q.defer();
+    try{
+    var user    =   this;
+    var result = []
+    var subCustomerList;
+    switch(user.userEntity){
+        case UserEntity.PLATFORM :
+            // console.log("this is called", UserEntity.PLATFORM );
+            result =  await Asset.find({}, {_id: 1});
+            user.Assets = result.map(item => item._id)
+            defer.resolve(new Message(Message.SUCCESS, "Assets",  user.Assets));
+            break;
+        case UserEntity.SERVICE_PROVIDER:
+            //  console.log("this is called", UserEntity.SERVICE_PROVIDER );
+             if(user.custFlag == "ALL"){
+                subCustomerList =  await SubCustomer.find({"spId":{ "$in": user.spCds}}, {_id: 1})
+              }else{
+                subCustomerList =  await SubCustomer.find({"custId":{ "$in": user.custCds}}, {_id: 1})
+              }
+              result = await Asset.find({"subCustId":{ "$in": subCustomerList}}, {_id: 1})
+              user.Assets = result.map(item => item._id)
+             defer.resolve(new Message(Message.SUCCESS, "Assets",  user.Assets));
+             break;
+        case UserEntity.CLIENT:
+           
+            //  console.log("this is called", UserEntity.CLIENT );
+             if(user.subCustFlag == "ALL"){
+               subCustomerList=  await SubCustomer.find({"custId":{ "$in": user.custCds}}, {_id: 1})
+               
+            }else{
+                subCustomerList = user.subCustCds;
+            }
+            result = await Asset.find({"subCustId":{ "$in": subCustomerList}}, {_id: 1})
+            user.Assets = result.map(item => item._id)
+        //  console.log("this is subCustomer",result )
+             defer.resolve(new Message(Message.SUCCESS, "Assets",  user.Assets));
+             break;    
+       case UserEntity.SUB_CUSTOMER:
+            // console.log("this is called", UserEntity.SUB_CUSTOMER );
+            if(user.assetFlag == "ALL"){
+                result = await Asset.find({"subCustId":{ "$in": user.subCustCds}}, {_id: 1})
+                user.Assets = result.map(item => item._id)
+                
+            }else{
+                // result =  user.Assets
+            }
+            defer.resolve(new Message(Message.SUCCESS, "Assets",  user.Assets));
+            break;       
+
+    }
+}
+    catch (error) {
+        defer.reject(new Message(Message.INTERNAL_ERROR, "This is error generated by UserSchema.methods.getAssetsList ", []));
+    }
+
+
+    return defer.promise;
+}
+
+UserSchema.methods.getDeviceList  = async function(){
+    let defer   =   q.defer();
+    try {
+    var user    =   this;
+    var result = []
+    var subCustomerList;
+    switch(user.userEntity){
+        case UserEntity.PLATFORM :
+            // console.log("this is called", UserEntity.PLATFORM );
+            result =  await Device.find({}, {_id: 1})
+            user.Devices = result.map(item => item._id)
+            defer.resolve(new Message(Message.SUCCESS, "subClient", user.Devices));
+            break;
+        case UserEntity.SERVICE_PROVIDER:
+            //  console.log("this is called", UserEntity.SERVICE_PROVIDER );
+             if(user.custFlag == "ALL"){
+                subCustomerList =  await SubCustomer.find({"spId":{ "$in": user.spCds}}, {_id: 1})
+              }else{
+                subCustomerList =  await SubCustomer.find({"custId":{ "$in": user.custCds}}, {_id: 1})
+              }
+              result = await Device.find({"subCustId":{ "$in": subCustomerList}}, {_id: 1})
+              user.Devices = result.map(item => item._id)
+             defer.resolve(new Message(Message.SUCCESS, "Device",  user.Devices));
+             break;
+        case UserEntity.CLIENT:
+           
+            //  console.log("this is called", UserEntity.CLIENT );
+             if(user.subCustFlag == "ALL"){
+               subCustomerList=  await SubCustomer.find({"custId":{ "$in": user.custCds}}, {_id: 1})
+               
+            }else{
+                subCustomerList = user.subCustCds;
+            }
+            result = await Device.find({"subCustId":{ "$in": subCustomerList}}, {_id: 1})
+            user.Devices = result.map(item => item._id)
+        //  console.log("this is subCustomer",result )
+             defer.resolve(new Message(Message.SUCCESS, "Device",  user.Devices));
+             break;    
+       case UserEntity.SUB_CUSTOMER:
+            // console.log("this is called", UserEntity.SUB_CUSTOMER );
+            if(user.deviceFlag == "ALL" && user.assetFlag == "Selected"){
+                result = await Device.find({"subCustId":{ "$in": user.subCustCds} , asset_Id: {"$in": user.Assets }}, {_id: 1})
+                user.Devices = result.map(item => item._id)
+            }else if(user.deviceFlag == "ALL" && user.assetFlag == "ALL"){
+                result = await Device.find({"subCustId":{ "$in": user.subCustCds} }, {_id: 1})
+                user.Devices = result.map(item => item._id)
+            }else{
+                // result = user.Devices
+            }
+           
+            defer.resolve(new Message(Message.SUCCESS, "Devices", user.Devices));
+            break;       
+
+    }
+}
+catch (error) {
+    defer.reject(new Message(Message.INTERNAL_ERROR, "This is error generated by UserSchema.methods.getDeviceList", []));
+}
+
+    return defer.promise;
+}
+
+
+
+UserSchema.methods.authenticate  =   function(password:string){
+    let defer   =   q.defer();
+
+    var user    =   this;
+    var hashed_password        =   user.password;
+
+    // if(user.email.indexOf('hdfcergo.com') == -1){
+        if(bcrypt.compareSync(password, hashed_password)){
+            var options:any      =   {expiresIn:expiresIn};
+    
+            var token = jwt.sign({ user_id: user.id }, env['SECRET'],options);
+            
+            var result  =   {
+                'id':user.id,
+                'token':token
+            };
+            user.failed_login   =   0;
+            user.lastLoginAt    =   new Date();
+            user.locked_till   =    moment().subtract(1,"month").toDate();
+            user.save();
+            defer.resolve((new Message(Message.SUCCESS,"User successfully authenticated.",result)));
+        } else {
+            if(user.failed_login == undefined){
+                user.failed_login   =   0;
+            }
+            user.failed_login   =   user.failed_login +1;
+            var is_locked   = false;
+            if(user.failed_login > 4){
+                is_locked   = true;
+                user.locked_till   =    moment().add((10*(user.failed_login-4)+1),"minutes").toDate();
+            }
+            user.save();
+            if(is_locked){
+                defer.reject(new Message(Message.AUTH_FAILED,"Your account is locked due to continuos failed attempts. It will unlocked in "+moment(user.locked_till).diff(moment(), 'minutes')+" minutes."));
+            } else {
+                defer.reject((new Message(Message.AUTH_FAILED,"Invalid Credential.")));
+            }
+            
+        }
+    // } else {
+        // hdfcErgoRadiusEnc(user.email,password).then(is_autheticated=>{
+        //     if(is_autheticated){
+        //         var options:any      =   {expiresIn:expiresIn};
+    
+        //         var token = jwt.sign({ user_id: user.id }, env['SECRET'],options);
+                
+        //         var result  =   {
+        //             'id':user.id,
+        //             'token':token
+        //         };
+        //         user.failed_login   =   0;
+        //         user.lastLoginAt    =   new Date();
+        //         user.locked_till   =    moment().subtract(1,"month").toDate();
+        //         user.save();
+        //         defer.resolve((new Message(Message.SUCCESS,"User successfully authenticated.",result)));
+        //     } else {
+        //         if(user.failed_login == undefined){
+        //             user.failed_login   =   0;
+        //         }
+        //         user.failed_login   =   user.failed_login +1;
+        //         var is_locked   = false;
+        //         if(user.failed_login > 4){
+        //             is_locked   = true;
+        //             user.locked_till   =    moment().add((10*(user.failed_login-4)+1),"minutes").toDate();
+        //         }
+        //         user.save();
+        //         if(is_locked){
+        //             defer.reject(new Message(Message.AUTH_FAILED,"Your account is locked due to continuos failed attempts. It will unlocked in "+moment(user.locked_till).diff(moment(), 'minutes')+" minutes."));
+        //         } else {
+        //             defer.reject((new Message(Message.AUTH_FAILED,"Invalid Credential.")));
+        //         }
+                
+        //     }
+        // }).catch((err)=>{
+        //     console.log(err);
+        //     defer.reject((new Message(Message.INTERNAL_ERROR,"Internal Error.",err)));
+        // })
+    // }
+    
+    return defer.promise;
+}
+
+
+export const User: IPaginatedModel<IUser> = model<IUser>("Users", UserSchema,"Users");

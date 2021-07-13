@@ -1,0 +1,17 @@
+var AES = require("crypto-js/aes");
+var CryptoJS = require("crypto-js");
+
+var secret_key =    "anf123k5md78kr39ktnf94jthrJJHJ89";
+
+var plain_text  =   "This is the plain text.";
+
+var ciphertext = AES.encrypt(plain_text, secret_key);
+
+console.log("Secret Key: "+secret_key);
+console.log("Plain Text: "+plain_text);
+console.log("Cipher Text: "+ciphertext.toString());
+
+var bytes  = AES.decrypt(ciphertext.toString(), secret_key);
+var plaintext = bytes.toString(CryptoJS.enc.Utf8);
+
+console.log("Decrypted Text: "+plaintext);

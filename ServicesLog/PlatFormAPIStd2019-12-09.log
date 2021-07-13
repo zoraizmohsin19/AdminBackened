@@ -1,0 +1,2113 @@
+10:51:41:159-This is user authenticate functions and body value [admin@sasyasystems.com]
+10:51:41:165-This is User  authenticate  admin@sasyasystems.com : U2FsdGVkX18v7/TNshp04532EWfcmHMCkecOrPnJTDM= : 0  
+10:51:41:628-This is user authenticate functions for  successfully authenticate 
+Message {
+  messageCode: 4,
+  messageString: 'User successfully authenticated.',
+  messageData: {
+    id: '5d9dc2037c213e55613c4ab0',
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNWQ5ZGMyMDM3YzIxM2U1NTYxM2M0YWIwIiwiaWF0IjoxNTc1ODY4OTAxLCJleHAiOjE1NzU5NTUzMDF9.I2vZlf6mDtEVlwP4xBcerohdCqae3t9mWCX3XVkwygA'
+  }
+}
+10:51:45:393-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+10:51:46:575-This is SubCustomer Controller index function query by admin@sasyasystems.com and Data
+{ all: 'true' }
+10:51:46:788-This is SubCustomer Controller index function query by admin@sasyasystems.com sucessfully get data 
+Message {
+  messageCode: 4,
+  messageString: 'User fetched.',
+  messageData: [
+    {
+      deleted: false,
+      _id: 5c36f1d6fb6fc0600bdd0ef9,
+      name: 'JAGRUTI COLD STORE INGORIA',
+      subCustCd: 'JAGCOLDIN',
+      custCd: 'JAGCOLDST',
+      spCd: 'ASAGRISY',
+      address: 'UJJAIN',
+      phone: '9425332240',
+      email: 'jagruti124@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c46c4edfb6fc02d2ef0d008,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: '001',
+      custCd: 'DevCub',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c593b47fb6fc06f4f555f5b,
+      name: 'ETC',
+      subCustCd: 'ETC01',
+      custCd: 'ETC00',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c6f8ac7fb6fc01c4cea0d1a,
+      name: 'Desai Green house Chintamani',
+      subCustCd: 'Desai-001',
+      custCd: 'Desai',
+      spCd: 'ASAGRISY',
+      address: 'HBD-Chintamani',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cbeb12dfb6fc0265f273060,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: 'Dev_002',
+      custCd: 'Dev',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cfa3f6ffb6fc00e79a55cd7,
+      name: 'Srikant Anantpur',
+      subCustCd: 'Sri-01',
+      custCd: 'Sri',
+      spCd: 'ASAGRISY',
+      address: 'Anantpur',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146bc4fb6fc00e79b1290b,
+      name: 'SMOarea426',
+      subCustCd: 'SMO_426',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'hsudhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146becfb6fc00e79b1291c,
+      name: 'Free Design',
+      subCustCd: 'Freed',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'dhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5dde72cac7ed6c39b071b0a8,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'Freed',
+      spCd: 'ASAGRISY',
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      spId: 5c36f111fb6fc0600bdd0ead,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-27T12:57:46.602Z,
+      updatedTime: 2019-11-28T06:28:17.430Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de260c330ec3122240bad09,
+      name: 'Mohd Takreem',
+      custCd: 'SMO1',
+      subCustCd: 'Takreem',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5d146b64fb6fc00e79b128df,
+      address: [Object],
+      phone: '7503150195',
+      email: 'takreem96@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-30T12:29:55.867Z,
+      updatedTime: 2019-11-30T12:29:55.867Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de4aae0649640361c87b5fa,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'SACH01',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-12-02T06:10:40.202Z,
+      updatedTime: 2019-12-02T06:10:40.202Z,
+      __v: 0
+    }
+  ]
+}
+10:51:49:284-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+10:51:49:600-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+10:51:51:448-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+10:51:53:472-This is Device Controller query in index function for fetching data
+{ page: '2', page_size: '10', search_query: '', subCustCd_search: '' }
+10:51:58:014-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 2,
+    pages: 2
+  }
+}
+10:51:58:279-This is Device Controller query in index function for fetching data
+{ page: '2', page_size: '10', search_query: '', subCustCd_search: '' }
+10:51:59:675-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 2,
+    pages: 2
+  }
+}
+11:01:19:356-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+11:01:20:121-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+11:01:20:344-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+11:01:21:456-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+11:01:24:618-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+11:01:25:361-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+11:01:25:582-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+11:01:26:312-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+11:01:27:022-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+11:01:27:600-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+11:01:27:810-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+11:01:28:490-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+11:01:28:677-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+11:01:29:261-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+11:01:32:847-This is SubCustomer Controller index function query by admin@sasyasystems.com and Data
+{ all: 'true' }
+11:01:32:854-This is AlertConfig Controller query in index function for fetching data
+{
+  page: '1',
+  page_size: '10',
+  search_query: '',
+  subCust_search: '',
+  type_search: 'level1'
+}
+11:01:33:029-This is SubCustomer Controller index function query by admin@sasyasystems.com sucessfully get data 
+Message {
+  messageCode: 4,
+  messageString: 'User fetched.',
+  messageData: [
+    {
+      deleted: false,
+      _id: 5c36f1d6fb6fc0600bdd0ef9,
+      name: 'JAGRUTI COLD STORE INGORIA',
+      subCustCd: 'JAGCOLDIN',
+      custCd: 'JAGCOLDST',
+      spCd: 'ASAGRISY',
+      address: 'UJJAIN',
+      phone: '9425332240',
+      email: 'jagruti124@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c46c4edfb6fc02d2ef0d008,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: '001',
+      custCd: 'DevCub',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c593b47fb6fc06f4f555f5b,
+      name: 'ETC',
+      subCustCd: 'ETC01',
+      custCd: 'ETC00',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c6f8ac7fb6fc01c4cea0d1a,
+      name: 'Desai Green house Chintamani',
+      subCustCd: 'Desai-001',
+      custCd: 'Desai',
+      spCd: 'ASAGRISY',
+      address: 'HBD-Chintamani',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cbeb12dfb6fc0265f273060,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: 'Dev_002',
+      custCd: 'Dev',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cfa3f6ffb6fc00e79a55cd7,
+      name: 'Srikant Anantpur',
+      subCustCd: 'Sri-01',
+      custCd: 'Sri',
+      spCd: 'ASAGRISY',
+      address: 'Anantpur',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146bc4fb6fc00e79b1290b,
+      name: 'SMOarea426',
+      subCustCd: 'SMO_426',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'hsudhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146becfb6fc00e79b1291c,
+      name: 'Free Design',
+      subCustCd: 'Freed',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'dhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5dde72cac7ed6c39b071b0a8,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'Freed',
+      spCd: 'ASAGRISY',
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      spId: 5c36f111fb6fc0600bdd0ead,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-27T12:57:46.602Z,
+      updatedTime: 2019-11-28T06:28:17.430Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de260c330ec3122240bad09,
+      name: 'Mohd Takreem',
+      custCd: 'SMO1',
+      subCustCd: 'Takreem',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5d146b64fb6fc00e79b128df,
+      address: [Object],
+      phone: '7503150195',
+      email: 'takreem96@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-30T12:29:55.867Z,
+      updatedTime: 2019-11-30T12:29:55.867Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de4aae0649640361c87b5fa,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'SACH01',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-12-02T06:10:40.202Z,
+      updatedTime: 2019-12-02T06:10:40.202Z,
+      __v: 0
+    }
+  ]
+}
+11:01:33:427-This is AlertConfig Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'AlertConfig fetched.',
+  messageData: {
+    docs: [ [Object], [Object], [Object] ],
+    total: 3,
+    limit: 10,
+    page: 1,
+    pages: 1
+  }
+}
+15:01:15:350-This is user authenticate functions and body value [admin@sasyasystems.com]
+15:01:15:352-This is User  authenticate  admin@sasyasystems.com : U2FsdGVkX18ywfXsUCdzwezi1dosB1cKpbQd2a+6IKs= : 0  
+15:01:15:800-This is user authenticate functions for  successfully authenticate 
+Message {
+  messageCode: 4,
+  messageString: 'User successfully authenticated.',
+  messageData: {
+    id: '5d9dc2037c213e55613c4ab0',
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNWQ5ZGMyMDM3YzIxM2U1NTYxM2M0YWIwIiwiaWF0IjoxNTc1ODgzODc1LCJleHAiOjE1NzU5NzAyNzV9.3NFJqyBqWkkji9IyR3h4VLP21N913vBdQPnkAEEjykY'
+  }
+}
+15:01:18:338-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+15:01:18:580-This is SubCustomer Controller index function query by admin@sasyasystems.com and Data
+{ all: 'true' }
+15:01:21:072-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+15:01:21:300-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+15:01:22:000-This is SubCustomer Controller index function query by admin@sasyasystems.com sucessfully get data 
+Message {
+  messageCode: 4,
+  messageString: 'User fetched.',
+  messageData: [
+    {
+      deleted: false,
+      _id: 5c36f1d6fb6fc0600bdd0ef9,
+      name: 'JAGRUTI COLD STORE INGORIA',
+      subCustCd: 'JAGCOLDIN',
+      custCd: 'JAGCOLDST',
+      spCd: 'ASAGRISY',
+      address: 'UJJAIN',
+      phone: '9425332240',
+      email: 'jagruti124@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c46c4edfb6fc02d2ef0d008,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: '001',
+      custCd: 'DevCub',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c593b47fb6fc06f4f555f5b,
+      name: 'ETC',
+      subCustCd: 'ETC01',
+      custCd: 'ETC00',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c6f8ac7fb6fc01c4cea0d1a,
+      name: 'Desai Green house Chintamani',
+      subCustCd: 'Desai-001',
+      custCd: 'Desai',
+      spCd: 'ASAGRISY',
+      address: 'HBD-Chintamani',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cbeb12dfb6fc0265f273060,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: 'Dev_002',
+      custCd: 'Dev',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cfa3f6ffb6fc00e79a55cd7,
+      name: 'Srikant Anantpur',
+      subCustCd: 'Sri-01',
+      custCd: 'Sri',
+      spCd: 'ASAGRISY',
+      address: 'Anantpur',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146bc4fb6fc00e79b1290b,
+      name: 'SMOarea426',
+      subCustCd: 'SMO_426',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'hsudhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146becfb6fc00e79b1291c,
+      name: 'Free Design',
+      subCustCd: 'Freed',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'dhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5dde72cac7ed6c39b071b0a8,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'Freed',
+      spCd: 'ASAGRISY',
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      spId: 5c36f111fb6fc0600bdd0ead,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-27T12:57:46.602Z,
+      updatedTime: 2019-11-28T06:28:17.430Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de260c330ec3122240bad09,
+      name: 'Mohd Takreem',
+      custCd: 'SMO1',
+      subCustCd: 'Takreem',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5d146b64fb6fc00e79b128df,
+      address: [Object],
+      phone: '7503150195',
+      email: 'takreem96@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-30T12:29:55.867Z,
+      updatedTime: 2019-11-30T12:29:55.867Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de4aae0649640361c87b5fa,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'SACH01',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-12-02T06:10:40.202Z,
+      updatedTime: 2019-12-02T06:10:40.202Z,
+      __v: 0
+    }
+  ]
+}
+15:01:23:375-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+15:20:04:000-This is user authenticate functions and body value [admin@sasyasystems.com]
+15:20:04:000-This is User  authenticate  admin@sasyasystems.com : U2FsdGVkX19C8ubzTstvgFGCV4ps0fJotzjnGaLVJbc= : 0  
+15:20:04:289-This is user authenticate functions for  successfully authenticate 
+Message {
+  messageCode: 4,
+  messageString: 'User successfully authenticated.',
+  messageData: {
+    id: '5d9dc2037c213e55613c4ab0',
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNWQ5ZGMyMDM3YzIxM2U1NTYxM2M0YWIwIiwiaWF0IjoxNTc1ODg1MDA0LCJleHAiOjE1NzU5NzE0MDR9.4aCwvHGfaj7wrFDBggF-XK6uxjYz4MGKaxLJNwPhdbY'
+  }
+}
+15:20:05:082-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+15:20:05:103-This is SubCustomer Controller index function query by admin@sasyasystems.com and Data
+{ all: 'true' }
+15:20:05:286-This is SubCustomer Controller index function query by admin@sasyasystems.com sucessfully get data 
+Message {
+  messageCode: 4,
+  messageString: 'User fetched.',
+  messageData: [
+    {
+      deleted: false,
+      _id: 5c36f1d6fb6fc0600bdd0ef9,
+      name: 'JAGRUTI COLD STORE INGORIA',
+      subCustCd: 'JAGCOLDIN',
+      custCd: 'JAGCOLDST',
+      spCd: 'ASAGRISY',
+      address: 'UJJAIN',
+      phone: '9425332240',
+      email: 'jagruti124@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c46c4edfb6fc02d2ef0d008,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: '001',
+      custCd: 'DevCub',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c593b47fb6fc06f4f555f5b,
+      name: 'ETC',
+      subCustCd: 'ETC01',
+      custCd: 'ETC00',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c6f8ac7fb6fc01c4cea0d1a,
+      name: 'Desai Green house Chintamani',
+      subCustCd: 'Desai-001',
+      custCd: 'Desai',
+      spCd: 'ASAGRISY',
+      address: 'HBD-Chintamani',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cbeb12dfb6fc0265f273060,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: 'Dev_002',
+      custCd: 'Dev',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cfa3f6ffb6fc00e79a55cd7,
+      name: 'Srikant Anantpur',
+      subCustCd: 'Sri-01',
+      custCd: 'Sri',
+      spCd: 'ASAGRISY',
+      address: 'Anantpur',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146bc4fb6fc00e79b1290b,
+      name: 'SMOarea426',
+      subCustCd: 'SMO_426',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'hsudhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146becfb6fc00e79b1291c,
+      name: 'Free Design',
+      subCustCd: 'Freed',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'dhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5dde72cac7ed6c39b071b0a8,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'Freed',
+      spCd: 'ASAGRISY',
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      spId: 5c36f111fb6fc0600bdd0ead,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-27T12:57:46.602Z,
+      updatedTime: 2019-11-28T06:28:17.430Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de260c330ec3122240bad09,
+      name: 'Mohd Takreem',
+      custCd: 'SMO1',
+      subCustCd: 'Takreem',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5d146b64fb6fc00e79b128df,
+      address: [Object],
+      phone: '7503150195',
+      email: 'takreem96@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-30T12:29:55.867Z,
+      updatedTime: 2019-11-30T12:29:55.867Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de4aae0649640361c87b5fa,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'SACH01',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-12-02T06:10:40.202Z,
+      updatedTime: 2019-12-02T06:10:40.202Z,
+      __v: 0
+    }
+  ]
+}
+15:20:06:083-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+15:20:06:280-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+15:20:08:626-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+15:20:12:592-This is DeviceTemplate Controller index function query by admin@sasyasystems.com and Data
+{ all: 'true' }
+15:20:12:596-This is SubCustomer Controller index function query by admin@sasyasystems.com and Data
+{ all: 'true' }
+15:20:12:766-This is SubCustomer Controller index function query by admin@sasyasystems.com sucessfully get data 
+Message {
+  messageCode: 4,
+  messageString: 'User fetched.',
+  messageData: [
+    {
+      deleted: false,
+      _id: 5c36f1d6fb6fc0600bdd0ef9,
+      name: 'JAGRUTI COLD STORE INGORIA',
+      subCustCd: 'JAGCOLDIN',
+      custCd: 'JAGCOLDST',
+      spCd: 'ASAGRISY',
+      address: 'UJJAIN',
+      phone: '9425332240',
+      email: 'jagruti124@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c46c4edfb6fc02d2ef0d008,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: '001',
+      custCd: 'DevCub',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c593b47fb6fc06f4f555f5b,
+      name: 'ETC',
+      subCustCd: 'ETC01',
+      custCd: 'ETC00',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c6f8ac7fb6fc01c4cea0d1a,
+      name: 'Desai Green house Chintamani',
+      subCustCd: 'Desai-001',
+      custCd: 'Desai',
+      spCd: 'ASAGRISY',
+      address: 'HBD-Chintamani',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cbeb12dfb6fc0265f273060,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: 'Dev_002',
+      custCd: 'Dev',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cfa3f6ffb6fc00e79a55cd7,
+      name: 'Srikant Anantpur',
+      subCustCd: 'Sri-01',
+      custCd: 'Sri',
+      spCd: 'ASAGRISY',
+      address: 'Anantpur',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146bc4fb6fc00e79b1290b,
+      name: 'SMOarea426',
+      subCustCd: 'SMO_426',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'hsudhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146becfb6fc00e79b1291c,
+      name: 'Free Design',
+      subCustCd: 'Freed',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'dhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5dde72cac7ed6c39b071b0a8,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'Freed',
+      spCd: 'ASAGRISY',
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      spId: 5c36f111fb6fc0600bdd0ead,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-27T12:57:46.602Z,
+      updatedTime: 2019-11-28T06:28:17.430Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de260c330ec3122240bad09,
+      name: 'Mohd Takreem',
+      custCd: 'SMO1',
+      subCustCd: 'Takreem',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5d146b64fb6fc00e79b128df,
+      address: [Object],
+      phone: '7503150195',
+      email: 'takreem96@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-30T12:29:55.867Z,
+      updatedTime: 2019-11-30T12:29:55.867Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de4aae0649640361c87b5fa,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'SACH01',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-12-02T06:10:40.202Z,
+      updatedTime: 2019-12-02T06:10:40.202Z,
+      __v: 0
+    }
+  ]
+}
+15:20:12:947-This is DeviceTemplate Controller index function query by admin@sasyasystems.com sucessfully get data 
+Message {
+  messageCode: 4,
+  messageString: 'DeviceTemplate fetched.',
+  messageData: [
+    {
+      deleted: false,
+      _id: 5ddd16e57c213e562519ab59,
+      name: 'wpc',
+      deviceSetup: [Object],
+      payloadSetup: [Array]
+    },
+    {
+      deleted: false,
+      _id: 5dde36587c213e56251a3542,
+      name: 'wpc1',
+      deviceSetup: [Object],
+      payloadSetup: [Array]
+    }
+  ]
+}
+15:20:13:486-This is SubCustomer Controller index function query by admin@sasyasystems.com and Data
+{ all: 'true' }
+15:20:13:511-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+15:20:13:656-This is SubCustomer Controller index function query by admin@sasyasystems.com sucessfully get data 
+Message {
+  messageCode: 4,
+  messageString: 'User fetched.',
+  messageData: [
+    {
+      deleted: false,
+      _id: 5c36f1d6fb6fc0600bdd0ef9,
+      name: 'JAGRUTI COLD STORE INGORIA',
+      subCustCd: 'JAGCOLDIN',
+      custCd: 'JAGCOLDST',
+      spCd: 'ASAGRISY',
+      address: 'UJJAIN',
+      phone: '9425332240',
+      email: 'jagruti124@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c46c4edfb6fc02d2ef0d008,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: '001',
+      custCd: 'DevCub',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c593b47fb6fc06f4f555f5b,
+      name: 'ETC',
+      subCustCd: 'ETC01',
+      custCd: 'ETC00',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c6f8ac7fb6fc01c4cea0d1a,
+      name: 'Desai Green house Chintamani',
+      subCustCd: 'Desai-001',
+      custCd: 'Desai',
+      spCd: 'ASAGRISY',
+      address: 'HBD-Chintamani',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cbeb12dfb6fc0265f273060,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: 'Dev_002',
+      custCd: 'Dev',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cfa3f6ffb6fc00e79a55cd7,
+      name: 'Srikant Anantpur',
+      subCustCd: 'Sri-01',
+      custCd: 'Sri',
+      spCd: 'ASAGRISY',
+      address: 'Anantpur',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146bc4fb6fc00e79b1290b,
+      name: 'SMOarea426',
+      subCustCd: 'SMO_426',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'hsudhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146becfb6fc00e79b1291c,
+      name: 'Free Design',
+      subCustCd: 'Freed',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'dhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5dde72cac7ed6c39b071b0a8,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'Freed',
+      spCd: 'ASAGRISY',
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      spId: 5c36f111fb6fc0600bdd0ead,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-27T12:57:46.602Z,
+      updatedTime: 2019-11-28T06:28:17.430Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de260c330ec3122240bad09,
+      name: 'Mohd Takreem',
+      custCd: 'SMO1',
+      subCustCd: 'Takreem',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5d146b64fb6fc00e79b128df,
+      address: [Object],
+      phone: '7503150195',
+      email: 'takreem96@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-30T12:29:55.867Z,
+      updatedTime: 2019-11-30T12:29:55.867Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de4aae0649640361c87b5fa,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'SACH01',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-12-02T06:10:40.202Z,
+      updatedTime: 2019-12-02T06:10:40.202Z,
+      __v: 0
+    }
+  ]
+}
+15:20:17:956-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+16:42:12:940-This is user authenticate functions and body value [admin@sasyasystems.com]
+16:42:12:940-This is User  authenticate  admin@sasyasystems.com : U2FsdGVkX19cRvvraVr/nB+Zd3jgRJXfoWrY77Xqzec= : 0  
+16:42:13:244-This is user authenticate functions for  successfully authenticate 
+Message {
+  messageCode: 4,
+  messageString: 'User successfully authenticated.',
+  messageData: {
+    id: '5d9dc2037c213e55613c4ab0',
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNWQ5ZGMyMDM3YzIxM2U1NTYxM2M0YWIwIiwiaWF0IjoxNTc1ODg5OTMzLCJleHAiOjE1NzU5NzYzMzN9.MiiML9BQEY230KmVCePwz6lpldCIytckEl1kNrbf1VI'
+  }
+}
+16:42:15:255-This is SubCustomer Controller index function query by admin@sasyasystems.com and Data
+{ all: 'true' }
+16:42:15:266-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+16:42:16:124-This is SubCustomer Controller index function query by admin@sasyasystems.com sucessfully get data 
+Message {
+  messageCode: 4,
+  messageString: 'User fetched.',
+  messageData: [
+    {
+      deleted: false,
+      _id: 5c36f1d6fb6fc0600bdd0ef9,
+      name: 'JAGRUTI COLD STORE INGORIA',
+      subCustCd: 'JAGCOLDIN',
+      custCd: 'JAGCOLDST',
+      spCd: 'ASAGRISY',
+      address: 'UJJAIN',
+      phone: '9425332240',
+      email: 'jagruti124@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c46c4edfb6fc02d2ef0d008,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: '001',
+      custCd: 'DevCub',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c593b47fb6fc06f4f555f5b,
+      name: 'ETC',
+      subCustCd: 'ETC01',
+      custCd: 'ETC00',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c6f8ac7fb6fc01c4cea0d1a,
+      name: 'Desai Green house Chintamani',
+      subCustCd: 'Desai-001',
+      custCd: 'Desai',
+      spCd: 'ASAGRISY',
+      address: 'HBD-Chintamani',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cbeb12dfb6fc0265f273060,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: 'Dev_002',
+      custCd: 'Dev',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cfa3f6ffb6fc00e79a55cd7,
+      name: 'Srikant Anantpur',
+      subCustCd: 'Sri-01',
+      custCd: 'Sri',
+      spCd: 'ASAGRISY',
+      address: 'Anantpur',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146bc4fb6fc00e79b1290b,
+      name: 'SMOarea426',
+      subCustCd: 'SMO_426',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'hsudhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146becfb6fc00e79b1291c,
+      name: 'Free Design',
+      subCustCd: 'Freed',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'dhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5dde72cac7ed6c39b071b0a8,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'Freed',
+      spCd: 'ASAGRISY',
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      spId: 5c36f111fb6fc0600bdd0ead,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-27T12:57:46.602Z,
+      updatedTime: 2019-11-28T06:28:17.430Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de260c330ec3122240bad09,
+      name: 'Mohd Takreem',
+      custCd: 'SMO1',
+      subCustCd: 'Takreem',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5d146b64fb6fc00e79b128df,
+      address: [Object],
+      phone: '7503150195',
+      email: 'takreem96@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-30T12:29:55.867Z,
+      updatedTime: 2019-11-30T12:29:55.867Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de4aae0649640361c87b5fa,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'SACH01',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-12-02T06:10:40.202Z,
+      updatedTime: 2019-12-02T06:10:40.202Z,
+      __v: 0
+    }
+  ]
+}
+16:42:17:570-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+16:42:17:779-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+16:42:18:291-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+16:47:47:049-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+16:47:47:748-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+16:47:50:226-This is Customer Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', spCd_search: '' }
+16:47:50:239-This is Service Provider Controller index function query by admin@sasyasystems.com and Data
+{}
+16:47:50:420-This is Service Provider  fetch function query by admin@sasyasystems.com sucessfully get data 
+[
+  {
+    deleted: false,
+    _id: 5c36f111fb6fc0600bdd0ead,
+    name: 'Cuberoot',
+    spCd: 'ASAGRISY',
+    address: 'Bangalore',
+    phone: '628736871',
+    email: 'asagrisystem@gmail.com',
+    mqttClient: 'mqtt://mqtt.agrisensorsandcontrols.com',
+    mqttClientExtra: 'mqtt://34.244.151.117',
+    servicesOffered: null,
+    SubTopic: 'mqtt_rx/th/mac_ID',
+    PubTopic: 'mqtt_tx/#',
+    active: 'Y'
+  }
+]
+16:47:50:443-This is Service Provider Controller index function query by admin@sasyasystems.com sucessfully get data 
+Message {
+  messageCode: 4,
+  messageString: 'Service Provider Fetch.',
+  messageData: [
+    {
+      deleted: false,
+      _id: 5c36f111fb6fc0600bdd0ead,
+      name: 'Cuberoot',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '628736871',
+      email: 'asagrisystem@gmail.com',
+      mqttClient: 'mqtt://mqtt.agrisensorsandcontrols.com',
+      mqttClientExtra: 'mqtt://34.244.151.117',
+      servicesOffered: null,
+      SubTopic: 'mqtt_rx/th/mac_ID',
+      PubTopic: 'mqtt_tx/#',
+      active: 'Y'
+    }
+  ]
+}
+16:47:50:581-This is Customer Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Customer fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 12,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+16:47:54:853-This is Customer Controller query in index function for fetching data
+{ page: '2', page_size: '10', search_query: '', spCd_search: '' }
+16:47:55:203-This is Customer Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Customer fetched.',
+  messageData: {
+    docs: [ [Object], [Object] ],
+    total: 12,
+    limit: 10,
+    page: 2,
+    pages: 2
+  }
+}
+16:47:55:389-This is Customer Controller query in index function for fetching data
+{ page: '2', page_size: '10', search_query: '', spCd_search: '' }
+16:47:55:721-This is Customer Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Customer fetched.',
+  messageData: {
+    docs: [ [Object], [Object] ],
+    total: 12,
+    limit: 10,
+    page: 2,
+    pages: 2
+  }
+}
+16:52:22:299-This is Customer Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', spCd_search: '' }
+16:52:22:657-This is Customer Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Customer fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 12,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+16:52:22:866-This is Customer Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', spCd_search: '' }
+16:52:23:230-This is Customer Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Customer fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 12,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+18:36:39:643-This is Customer Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', spCd_search: '' }
+18:36:41:640-This is Customer Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Customer fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 12,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+18:36:48:115-This is Customer Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', spCd_search: '' }
+18:36:48:138-This is Service Provider Controller index function query by admin@sasyasystems.com and Data
+{}
+18:36:49:149-This is Service Provider  fetch function query by admin@sasyasystems.com sucessfully get data 
+[
+  {
+    deleted: false,
+    _id: 5c36f111fb6fc0600bdd0ead,
+    name: 'Cuberoot',
+    spCd: 'ASAGRISY',
+    address: 'Bangalore',
+    phone: '628736871',
+    email: 'asagrisystem@gmail.com',
+    mqttClient: 'mqtt://mqtt.agrisensorsandcontrols.com',
+    mqttClientExtra: 'mqtt://34.244.151.117',
+    servicesOffered: null,
+    SubTopic: 'mqtt_rx/th/mac_ID',
+    PubTopic: 'mqtt_tx/#',
+    active: 'Y'
+  }
+]
+18:36:49:179-This is Service Provider Controller index function query by admin@sasyasystems.com sucessfully get data 
+Message {
+  messageCode: 4,
+  messageString: 'Service Provider Fetch.',
+  messageData: [
+    {
+      deleted: false,
+      _id: 5c36f111fb6fc0600bdd0ead,
+      name: 'Cuberoot',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '628736871',
+      email: 'asagrisystem@gmail.com',
+      mqttClient: 'mqtt://mqtt.agrisensorsandcontrols.com',
+      mqttClientExtra: 'mqtt://34.244.151.117',
+      servicesOffered: null,
+      SubTopic: 'mqtt_rx/th/mac_ID',
+      PubTopic: 'mqtt_tx/#',
+      active: 'Y'
+    }
+  ]
+}
+18:36:49:322-This is Customer Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Customer fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 12,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+18:36:55:557-This is Customer Controller query in index function for fetching data
+{ page: '2', page_size: '10', search_query: '', spCd_search: '' }
+18:36:55:925-This is Customer Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Customer fetched.',
+  messageData: {
+    docs: [ [Object], [Object] ],
+    total: 12,
+    limit: 10,
+    page: 2,
+    pages: 2
+  }
+}
+18:36:56:106-This is Customer Controller query in index function for fetching data
+{ page: '2', page_size: '10', search_query: '', spCd_search: '' }
+18:36:56:445-This is Customer Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Customer fetched.',
+  messageData: {
+    docs: [ [Object], [Object] ],
+    total: 12,
+    limit: 10,
+    page: 2,
+    pages: 2
+  }
+}
+18:37:00:309-This is Customer Controller query in index function for fetching data
+{ page: '2', page_size: '10', search_query: '', spCd_search: '' }
+18:37:00:654-This is Customer Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Customer fetched.',
+  messageData: {
+    docs: [ [Object], [Object] ],
+    total: 12,
+    limit: 10,
+    page: 2,
+    pages: 2
+  }
+}
+18:37:07:891-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+18:37:07:911-This is SubCustomer Controller index function query by admin@sasyasystems.com and Data
+{ all: 'true' }
+18:37:08:088-This is SubCustomer Controller index function query by admin@sasyasystems.com sucessfully get data 
+Message {
+  messageCode: 4,
+  messageString: 'User fetched.',
+  messageData: [
+    {
+      deleted: false,
+      _id: 5c36f1d6fb6fc0600bdd0ef9,
+      name: 'JAGRUTI COLD STORE INGORIA',
+      subCustCd: 'JAGCOLDIN',
+      custCd: 'JAGCOLDST',
+      spCd: 'ASAGRISY',
+      address: 'UJJAIN',
+      phone: '9425332240',
+      email: 'jagruti124@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c46c4edfb6fc02d2ef0d008,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: '001',
+      custCd: 'DevCub',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c593b47fb6fc06f4f555f5b,
+      name: 'ETC',
+      subCustCd: 'ETC01',
+      custCd: 'ETC00',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5c6f8ac7fb6fc01c4cea0d1a,
+      name: 'Desai Green house Chintamani',
+      subCustCd: 'Desai-001',
+      custCd: 'Desai',
+      spCd: 'ASAGRISY',
+      address: 'HBD-Chintamani',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cbeb12dfb6fc0265f273060,
+      name: 'Cuberootz Green House HSR Layout',
+      subCustCd: 'Dev_002',
+      custCd: 'Dev',
+      spCd: 'ASAGRISY',
+      address: 'BLR-HSR',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5cfa3f6ffb6fc00e79a55cd7,
+      name: 'Srikant Anantpur',
+      subCustCd: 'Sri-01',
+      custCd: 'Sri',
+      spCd: 'ASAGRISY',
+      address: 'Anantpur',
+      phone: '',
+      email: '',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146bc4fb6fc00e79b1290b,
+      name: 'SMOarea426',
+      subCustCd: 'SMO_426',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'hsudhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5d146becfb6fc00e79b1291c,
+      name: 'Free Design',
+      subCustCd: 'Freed',
+      custCd: 'SMO1',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '9425332240',
+      email: 'dhvfs@gmail.com',
+      servicesTaken: [Object]
+    },
+    {
+      deleted: false,
+      _id: 5dde72cac7ed6c39b071b0a8,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'Freed',
+      spCd: 'ASAGRISY',
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      spId: 5c36f111fb6fc0600bdd0ead,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-27T12:57:46.602Z,
+      updatedTime: 2019-11-28T06:28:17.430Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de260c330ec3122240bad09,
+      name: 'Mohd Takreem',
+      custCd: 'SMO1',
+      subCustCd: 'Takreem',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5d146b64fb6fc00e79b128df,
+      address: [Object],
+      phone: '7503150195',
+      email: 'takreem96@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-11-30T12:29:55.867Z,
+      updatedTime: 2019-11-30T12:29:55.867Z,
+      __v: 0
+    },
+    {
+      deleted: false,
+      _id: 5de4aae0649640361c87b5fa,
+      name: 'sachin',
+      custCd: 'DevCub',
+      subCustCd: 'SACH01',
+      spCd: 'ASAGRISY',
+      spId: 5c36f111fb6fc0600bdd0ead,
+      custId: 5c46c47cfb6fc02d2ef0cfa6,
+      address: [Object],
+      phone: '7795060424',
+      email: 'sachin@gmail.com',
+      lastModifieduser: 'admin@sasyasystems.com',
+      createdTime: 2019-12-02T06:10:40.202Z,
+      updatedTime: 2019-12-02T06:10:40.202Z,
+      __v: 0
+    }
+  ]
+}
+18:37:08:431-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+19:24:03:077-This is Device Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', subCustCd_search: '' }
+19:24:05:017-This is Device Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Device fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 19,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+19:24:05:664-This is Customer Controller query in index function for fetching data
+{ page: '1', page_size: '10', search_query: '', spCd_search: '' }
+19:24:05:744-This is Service Provider Controller index function query by admin@sasyasystems.com and Data
+{}
+19:24:06:719-This is Service Provider  fetch function query by admin@sasyasystems.com sucessfully get data 
+[
+  {
+    deleted: false,
+    _id: 5c36f111fb6fc0600bdd0ead,
+    name: 'Cuberoot',
+    spCd: 'ASAGRISY',
+    address: 'Bangalore',
+    phone: '628736871',
+    email: 'asagrisystem@gmail.com',
+    mqttClient: 'mqtt://mqtt.agrisensorsandcontrols.com',
+    mqttClientExtra: 'mqtt://34.244.151.117',
+    servicesOffered: null,
+    SubTopic: 'mqtt_rx/th/mac_ID',
+    PubTopic: 'mqtt_tx/#',
+    active: 'Y'
+  }
+]
+19:24:06:735-This is Service Provider Controller index function query by admin@sasyasystems.com sucessfully get data 
+Message {
+  messageCode: 4,
+  messageString: 'Service Provider Fetch.',
+  messageData: [
+    {
+      deleted: false,
+      _id: 5c36f111fb6fc0600bdd0ead,
+      name: 'Cuberoot',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '628736871',
+      email: 'asagrisystem@gmail.com',
+      mqttClient: 'mqtt://mqtt.agrisensorsandcontrols.com',
+      mqttClientExtra: 'mqtt://34.244.151.117',
+      servicesOffered: null,
+      SubTopic: 'mqtt_rx/th/mac_ID',
+      PubTopic: 'mqtt_tx/#',
+      active: 'Y'
+    }
+  ]
+}
+19:24:06:941-This is Customer Controller query in index function for fetched result
+Message {
+  messageCode: 4,
+  messageString: 'Customer fetched.',
+  messageData: {
+    docs: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    total: 12,
+    limit: 10,
+    page: 1,
+    pages: 2
+  }
+}
+19:24:12:980-This is Service Provider Controller index function query by admin@sasyasystems.com and Data
+{}
+19:24:13:161-This is Service Provider  fetch function query by admin@sasyasystems.com sucessfully get data 
+[
+  {
+    deleted: false,
+    _id: 5c36f111fb6fc0600bdd0ead,
+    name: 'Cuberoot',
+    spCd: 'ASAGRISY',
+    address: 'Bangalore',
+    phone: '628736871',
+    email: 'asagrisystem@gmail.com',
+    mqttClient: 'mqtt://mqtt.agrisensorsandcontrols.com',
+    mqttClientExtra: 'mqtt://34.244.151.117',
+    servicesOffered: null,
+    SubTopic: 'mqtt_rx/th/mac_ID',
+    PubTopic: 'mqtt_tx/#',
+    active: 'Y'
+  }
+]
+19:24:13:207-This is Service Provider Controller index function query by admin@sasyasystems.com sucessfully get data 
+Message {
+  messageCode: 4,
+  messageString: 'Service Provider Fetch.',
+  messageData: [
+    {
+      deleted: false,
+      _id: 5c36f111fb6fc0600bdd0ead,
+      name: 'Cuberoot',
+      spCd: 'ASAGRISY',
+      address: 'Bangalore',
+      phone: '628736871',
+      email: 'asagrisystem@gmail.com',
+      mqttClient: 'mqtt://mqtt.agrisensorsandcontrols.com',
+      mqttClientExtra: 'mqtt://34.244.151.117',
+      servicesOffered: null,
+      SubTopic: 'mqtt_rx/th/mac_ID',
+      PubTopic: 'mqtt_tx/#',
+      active: 'Y'
+    }
+  ]
+}
